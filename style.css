@@ -1,0 +1,102 @@
+@import url(https://fonts.google.com/specimen/Manrope);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+
+}
+:root{
+    --LightCyan: hsl(193, 38%, 86%) ;
+    --NeonGreen: hsl(150, 100%, 66%);
+    --GrayishBlue: hsl(217, 19%, 38%) ;
+    --DarkGrayishBlue: hsl(217, 19%, 24%); 
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+body{
+    background-color: var(--DarkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+}
+
+.box{
+    background-color: var(--DarkGrayishBlue);
+    width: 400px;
+    padding: 2rem;
+    border-radius: 1rem;
+    aspect-ratio: 2/1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px var(--DarkBlue);
+}
+.title{
+    text-transform: uppercase;
+    padding: 1rem;
+    text-align: center;
+    color: var(--NeonGreen);
+    letter-spacing: .25rem;
+
+}
+.qoute{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--LightCyan);
+    text-align: center;
+}
+.art{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   padding: 1rem;
+   margin-top: 2rem;
+   /* top: 4rem; */
+}
+.line1 , .line2{
+    height: 2px;
+    background-color: var(--GrayishBlue);
+    width: 35%;
+    margin: 0 .5rem;
+}
+.center1 , .center2{
+    height: 15px;
+    background-color: var(--LightCyan);
+    border-radius: 10px;
+    width: 5px;
+    margin: 3px;
+}
+.btn{
+    width: 4rem;
+    aspect-ratio: 1/1;
+    background-color: var(--NeonGreen);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .5s;
+}
+.btn:active{
+    box-shadow: 0 0 20px var(--NeonGreen);
+}
+.footer{
+    position: absolute;
+    top: 90%;
+    color: var(--LightCyan);
+    font-size: 11px;
+    text-align: center;
+}
+a{
+    color: var(--NeonGreen);
+}
+@media only screen and (max-width: 400px) {
+    .box{
+        width: 90%;
+    }
+}
